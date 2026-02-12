@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply font-inter bg-[#0b0e11] text-white min-h-screen flex items-center justify-center overflow-x-hidden;
+    background: radial-gradient(circle at 50% -20%, #1e2634 0%, #0b0e11 50%);
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-outfit;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-card-bg backdrop-blur-xl border border-white/5 shadow-2xl;
+  }
+  
+  .token-icon {
+    @apply w-6 h-6 rounded-full bg-white flex items-center justify-center overflow-hidden;
+  }
+
+  .token-icon img {
+    @apply w-full h-full object-contain;
+  }
+}
